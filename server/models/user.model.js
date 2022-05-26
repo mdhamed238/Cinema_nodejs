@@ -13,6 +13,9 @@ const userSchema = mongoose.Schema({
     password: {
         type: String,
         required: [true, 'Please add a password']
+    },
+    favoriteMovies: {
+        type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }],
     }
 },
     {

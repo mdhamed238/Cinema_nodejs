@@ -10,7 +10,7 @@ const {
 
 const { protect } = require('../middleware/authMiddleware')
 
-router.route('/').get(protect, getMovies).post(protect, setMovie)
+router.route('/').get(getMovies).post(protect, setMovie)
 router.route('/many').post(protect, setMovies)
 router.route('/:id').delete(protect, deleteMovie).put(protect, updateMovie)
 
