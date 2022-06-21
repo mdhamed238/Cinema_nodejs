@@ -36,7 +36,7 @@ app.use('/api/users', require('./routes/userRoutes'));
 //   );
 // }
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
 	res.send("APP IS RUNNING")
 })
 

@@ -4,6 +4,7 @@ import CTA from '../components/CTA/CTA'
 import Footer from '../components/Footer/Footer'
 import ListItem from '../components/List/ListItem'
 import Card from "../components/Card/Card"
+import baseUrl from './../url';
 
 
 
@@ -12,10 +13,10 @@ const Home = () => {
     const [movies, setMovies] = useState([])
 
     const navigate = useNavigate()
-
+    
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/movies")
+        fetch(baseUrl + "/api/movies")
             .then(res => res.json())
             .then(data => setMovies(data))
     }, [])
