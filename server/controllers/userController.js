@@ -104,7 +104,7 @@ const toggleFavorite = asyncHandler(async (req, res) => {
         return
     }
 
-    else if (!movieId) {
+    if (!movieId) {
         res.status(400).json({ success: false, msg: 'Movie not found' })
         return
     }

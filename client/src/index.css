@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    @apply bg-gray-50;
+}
+
+
+.sticky-nav {
+	animation: sticky - nav 300ms;
+}
+
+@keyframes sticky-nav {
+	0% {
+		transform: translateY(-6em);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
+
+.text-loading {
+    @apply overflow-hidden z-10 inline-block;
+}
+
+.text-loading .dote-container {
+    @apply relative;
+}
+
+.text-loading .dote-container::after {
+    content: '';
+    @apply absolute w-7 h-full bg-gray-50;
+    animation: dote-move 1s infinite;
+}
+
+.text-loading .bg-white::after {
+    background-color: #FFF !important
+}
+
+@keyframes dote-move {
+    0% {
+        @apply left-0;
+    }
+    100% {
+        @apply left-[1.9rem];
+    }
+}
