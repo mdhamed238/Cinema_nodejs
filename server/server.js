@@ -6,7 +6,6 @@ const colors = require('colors');
 const { errorHandler } = require('./middleware/errorMiddleware');
 const connectDB = require('./config/db');
 const app = express();
-require('./production')(app);
 
 const port = process.env.PORT || 5000;
 
